@@ -1,0 +1,23 @@
+{
+  "name": "scrapingblogsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nickesotom/blogsite.git"
+  },
+  "author": "nick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nickesotom/blogsite/issues"
+  },
+  "homepage": "https://github.com/nickesotom/blogsite#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "node-fetch": "^2.3.0"
+  }
+}
