@@ -3,7 +3,7 @@ const cheerio = require('cheerio');
 
 
 // const puppeteer = require('puppeteer');
-const url = 'https://www.lewisu.edu/experts/wordpress/?cat=34'
+const url = 'http://www.lewisu.edu/experts/wordpress/index.php/blog/'
 
 function fetchPosts() {
   return fetch(url).then(response => response.text());
