@@ -24,17 +24,17 @@ function fetchPosts() {
 
         const post = {  
 
-          // image: $image.attr('src'),
-          // title: $title.text(),
-          // summary: $summary.text(),
-          // link: $link.attr('href'),
-          // author: $author.text()
+          image: $image.attr('src'),
+          title: $title.text(),
+          summary: $summary.text(),
+          link: $link.attr('href'),
+          author: $author.text()
 
-          image: 'x',
-          title: 'x',
-          summary: 'x',
-          link: 'x',
-          author: 'x'
+          // image: 'x',
+          // title: 'x',
+          // summary: 'x',
+          // link: 'x',
+          // author: 'x'
         }
       
       posts.push(post);
