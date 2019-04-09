@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   })
 })
 
-app.get('/blogs', (req, res) => {
+app.get('/blog', (req, res) => {
   scrape
     .fetchPosts()
     .then(posts => {
@@ -23,7 +23,7 @@ app.get('/blogs', (req, res) => {
 })
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8000;
 app.listen(port, () => {
   console.log(`Listening on ${port}`)
 })

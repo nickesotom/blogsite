@@ -2,6 +2,8 @@ const cheerio = require('cheerio');
 const fetch = require('node-fetch')
 
 
+
+
 function fetchPosts() {
   return fetch('http://www.lewisu.edu/experts/wordpress/index.php/blog/')
     .then(response => response.text())
@@ -22,23 +24,32 @@ function fetchPosts() {
 
         const post = {  
 
-          image: $image.attr('src'),
-          title: $title.text(),
-          summary: $summary.text(),
-          link: $link.attr('href'),
-          author: $author.text()
-        }
+          // image: $image.attr('src'),
+          // title: $title.text(),
+          // summary: $summary.text(),
+          // link: $link.attr('href'),
+          // author: $author.text()
 
+          image: 'x',
+          title: 'x',
+          summary: 'x',
+          link: 'x',
+          author: 'x'
+        }
+      
       posts.push(post);
     });
-      console.log(posts)
+      console.log(posts[0])
       const blog = {
         blogs: posts
       }
-      console.log(blog)
+      // console.log(blog.blogs[0])
     return blog
+
   });
 }
+
+
 
 module.exports = {
   fetchPosts
