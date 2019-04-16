@@ -2,8 +2,6 @@ const cheerio = require('cheerio');
 const fetch = require('node-fetch')
 
 
-
-
 function fetchPosts() {
   return fetch('http://www.lewisu.edu/experts/wordpress/index.php/blog/')
     .then(response => response.text())
@@ -22,7 +20,7 @@ function fetchPosts() {
         // console.log($title.text())
         // console.log($summary.text());
 
-        const post = {  
+        const post = {
 
           image: $image.attr('src'),
           title: $title.text(),
@@ -36,20 +34,25 @@ function fetchPosts() {
           // link: 'x',
           // author: 'x'
         }
-      
-      posts.push(post);
-    });
+
+        posts.push(post);
+      });
       console.log(posts[0])
       const blog = {
         blogs: posts
       }
       // console.log(blog.blogs[0])
-    return blog
+      return blog
 
-  });
+    });
 }
 
+// setInterval(fetchPosts, 7000);
 
+/* git add.
+   git commit -am '[message]'
+   git push heroku master
+*/
 
 module.exports = {
   fetchPosts
